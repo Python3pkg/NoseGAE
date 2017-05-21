@@ -151,7 +151,7 @@ class NoseGAE(Plugin):
             the_test = the_test.test
         the_test.testbed = self.testbed
 
-        for stub_name, stub_init in testbed.INIT_STUB_METHOD_NAMES.iteritems():
+        for stub_name, stub_init in testbed.INIT_STUB_METHOD_NAMES.items():
             if not getattr(the_test, 'nosegae_%s' % stub_name, False):
                 continue
             stub_kwargs = getattr(the_test, 'nosegae_%s_kwargs' % stub_name, {})
